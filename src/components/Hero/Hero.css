@@ -1,0 +1,200 @@
+.ref {
+    width: 300px;
+    height: 100px;
+
+    --b:4px;   /* border length*/
+    --c:20px;  /* the cube perspective */
+    
+    --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+    
+    transition: 0.5s;
+    border: solid transparent;
+    border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+    background:
+      linear-gradient(-45deg,transparent var(--g),rgba(255,255,255,0.6) 0) left  /var(--c) 100%,
+      linear-gradient(135deg,transparent var(--g),rgba(255,255,255,0.3) 0) bottom /100% var(--c),
+      conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
+      conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+    clip-path: 
+      polygon(var(--c) 0%, var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
+  }
+  .ref:hover {
+    transform:translate(0,0);
+    clip-path: 
+      polygon(0% var(--c), var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+      0% 100%,0% 100%);
+  }
+
+  /* Hero Section */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Image Styling */
+.image {
+    width: 500px;
+    height: 500px;
+    border-radius: 60px;
+    margin: 20px;
+    object-fit: cover; /* Ensures the image scales properly */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    animation: float 3s ease-in-out infinite; /* Animation applied */
+}
+
+/* Hero Text Styling */
+.heroText {
+    text-align: center;
+    max-width: 500px;
+    margin: 20px;
+}
+
+/* Text Styling */
+.heroText p {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.heroText h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.heroText h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Social Links Container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Social Icon Styling */
+.social-icon {
+    color: #333;
+    transition: color 0.3s ease;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    color: #bb9351;
+}
+
+/* Scroll Button */
+.scroll {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 50%;
+    rotate: -90deg;
+    font-size: 20px;
+    text-decoration: overline;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arrow Image */
+img {
+    width: 25px;
+    padding-left: 5px;
+}
+
+.arrow {
+    rotate: 180deg;
+}
+
+/* Keyframes for Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Initial position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+/* Responsive Design for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+        margin: 10px 0;
+    }
+
+    .heroText h1 {
+        font-size: 40px;
+    }
+
+    .heroText h2 {
+        font-size: 25px;
+    }
+
+    .heroText p {
+        font-size: 18px;
+    }
+}
+
+/* Mobile-Friendly Design */
+@media (max-width: 400px) {
+    .hero {
+        padding: 10px;
+    }
+
+    .image {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .heroText h1 {
+        font-size: 30px;
+    }
+
+    .heroText h2 {
+        font-size: 20px;
+    }
+
+    .heroText p {
+        font-size: 16px;
+    }
+
+    .scroll {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}

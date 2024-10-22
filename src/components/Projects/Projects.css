@@ -1,0 +1,187 @@
+.projects-container {
+  width: 80%; /* Occupies 80% of the parent container */
+  height: fit-content; /* Adjusts height based on content */
+  margin: 100px auto; /* Centers the container horizontally */
+  text-align: center; /* Centers text inside the container */
+  padding: 60px 0; /* Padding at the top and bottom */
+  background: linear-gradient(to bottom, #faf3e0, #f8e8d4); /* Subtle gradient */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-style: ridge;
+  border-width: 10px;
+  box-sizing: border-box; /* Ensures padding fits within width */
+}
+  
+  .projects-heading {
+    font-size: 20px;
+    color: #8a8a8a; /* Subtle gray for heading */
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-title {
+    font-size: 36px;
+    color: #333; /* Darker for contrast */
+    margin-bottom: 40px;
+  }
+  
+  /* Grid Layout */
+  .projects-grid {
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Project Card Styling */
+  .project-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    text-align: left;
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 60%;
+    background-size: contain;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle image shadow */
+  }
+  
+  .project-title {
+    font-size: 22px;
+    color: #4a4a4a; /* Dark gray for titles */
+    margin-bottom: 10px;
+  }
+  
+  /* Buttons Styling */
+  .project-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+  
+  /* Button Colors Matching Theme */
+  .github-btn {
+    background-color: #d1d1d1; /* Light gray */
+    color: black;
+  }
+  
+  .demo-btn {
+    background-color: #bb9351; /* Pink from your theme */
+    color: white;
+  }
+  
+  .github-btn:hover {
+    background-color: #b1b1b1; /* Darker gray on hover */
+  }
+  
+  .demo-btn:hover {
+    background-color: #a4793f; /* Darker pink on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .projects-container {
+      width: 90%; /* Slightly wider for tablets */
+      margin: 80px auto;
+      padding: 40px 0;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  
+    .projects-grid {
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 20px;
+      height: auto; /* Ensure card height fits content */
+      display: flex;
+      flex-direction: column; /* Make content flow vertically */
+      justify-content: space-between; /* Distribute content evenly */
+    }
+  }
+  
+  /* Mobile View (Width <= 480px) */
+  @media (max-width: 480px) {
+    .projects-container {
+      width: 90%; /* Almost full-width for mobile */
+      margin: 100px auto;
+      padding: 20px 10px;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr; /* Single column for mobile */
+      gap: 15px;
+    }
+  
+    .project-card {
+      padding: 15px;
+      height: auto; /* Ensure card height fits content */
+      display: flex;
+      flex-direction: column; /* Make content flow vertically */
+      justify-content: space-between; /* Distribute content evenly */
+    }
+  
+    .project-title {
+      font-size: 18px;
+    }
+  
+    .portfolio-title {
+      font-size: 28px;
+    }
+
+    .btn {
+      width: 48%; /* Slightly wider buttons for tablets */
+      padding: 8px 16px;
+  }
+  }
+  
+  /* Adjustments for 375px Screens */
+  @media (max-width: 375px) {
+    .projects-container {
+      width: 90%; /* Avoid full width */
+      margin: 20px auto;
+      padding: 15px 5px; /* Compact padding */
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  
+    .projects-grid {
+      gap: 10px; /* Smaller gap between cards */
+    }
+  
+    .project-card {
+      padding: 10px; /* Compact padding for small screens */
+    }
+  
+    .portfolio-title {
+      font-size: 24px;
+    }
+
+    .project-card {
+      padding: 10px; /* Compact padding for small screens */
+      height: auto; /* Ensure card height fits content */
+      display: flex;
+      flex-direction: column; /* Make content flow vertically */
+      justify-content: space-between; /* Distribute content evenly */
+  }
+  }

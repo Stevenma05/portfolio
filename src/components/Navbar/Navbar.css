@@ -1,0 +1,162 @@
+/* Navbar Container */
+nav {
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* Logo Styling */
+.logo {
+    width: 180px;
+}
+
+/* Navbar List Items */
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 0;
+    padding-left: 55%; /* For larger screens */
+    list-style: none;
+}
+
+/* Animate All List Items */
+nav ul li {
+    display: inline-block;
+    font-size: 16px;
+    background: 
+      linear-gradient(currentColor 0 0) 
+      bottom /var(--d, 0) 3px 
+      no-repeat;
+    transition: 0.5s;
+}
+
+/* Hover Effect for Animated Items */
+nav ul li:hover {
+    --d: 90%;
+}
+
+/* Exclude Animation for the Contact Item */
+.contact {
+    background-color: white;
+    padding: 5px 10px;
+    align-self: center;
+    border-style: double;
+    --_g1: conic-gradient(from 90deg at 50% 75%,#bb9351  90deg,#fff 0) no-repeat;
+    --_g2: conic-gradient(from 90deg at 50% 75%,#0000 90deg,#bb9351 0) no-repeat;
+    background: 
+      var(--_g1) 0    calc(134% - var(--_p,0%)),
+      var(--_g2) 0    calc(134% - var(--_p,0%)),
+      var(--_g1) 100% calc(200% - var(--_p,0%)),
+      var(--_g2) 100% calc(200% - var(--_p,0%)),
+      #000;
+    background-size: 50.2% 400%;
+    -webkit-background-clip: text, padding-box;
+            background-clip: text, padding-box;
+    transition: 0.8s;
+}
+
+/* Hover Effect for the Contact Item */
+.contact:hover {
+    --_p: 134%;
+    color: white;
+}
+
+/* Exclude Contact from the List Item Animation */
+.contact:hover {
+    --d: 0%; /* Overrides the animation */
+}
+
+/* Dark Theme Navbar */
+.dark-nav {
+    background: linear-gradient(to right, #333 40%, rgba(51, 51, 51, 0.4) 80%);
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+/* Responsive Design for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+        background: linear-gradient(#333 -50%, rgba(51, 51, 51, 0.4) 50%);
+        color: white;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 150px; /* Smaller logo for tablets */
+    }
+
+    nav ul {
+        padding-left: 0;
+        gap: 15px;
+    }
+
+    nav ul li {
+        font-size: 15px; /* Smaller font size */
+        right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack logo and menu items */
+        align-items: flex-start;
+        padding: 10px;
+        padding: 0px 20px;
+        font-size: 5px;
+    }
+
+    .logo {
+        width: 120px; /* Smaller logo for phones */
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: space-around; /* Center-align menu items */
+        flex-wrap: wrap; /* Wrap items if needed */
+    }
+
+    nav ul li {
+        font-size: 13px; /* Adjust font size */
+        margin: 10px 0;
+    }
+}
+
+
+/* Mobile-Friendly Design for Phones (Max Width: 400px) */
+@media (max-width: 400px) {
+    nav {
+        flex-direction: column; /* Stack logo and menu items */
+        align-items: flex-start;
+        padding: 10px;
+        padding: 0px 20px;
+        font-size: 5px;
+    }
+
+    .logo {
+        width: 120px; /* Smaller logo for phones */
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: space-around; /* Center-align menu items */
+        flex-wrap: wrap; /* Wrap items if needed */
+    }
+
+    nav ul li {
+        font-size: 10px; /* Adjust font size */
+        margin: 10px 0;
+    }
+}
+
