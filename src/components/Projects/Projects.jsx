@@ -42,7 +42,7 @@ function Projects() {
     {
       title: 'Personal Portfolio',
       image: personal, 
-      github: '#',
+      github: 'https://github.com/Stevenma05/portfolio.git',
       liveDemo: 'https://www.stevenabdalla.com',
     },
   ];
