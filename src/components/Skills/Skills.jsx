@@ -23,10 +23,11 @@ function Skills() {
             title="Web & Database"
             skills={[
               'HTML/CSS',
-              'Flask',
               'Node.js',
               'React',
-              'Bootstrap'
+              'Bootstrap',
+              'Material UI',
+              'Axios'
             ]}
           />
 
