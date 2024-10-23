@@ -2,7 +2,7 @@ import React from 'react';
 import './Projects.css';
 import mathlogo from "../../assets/mathgame.png";
 import predictlogo from "../../assets/predictlogo.jpg";
-import notespic from "../../assets/notepic.png";
+import notespic from "../../assets/notepix.png";
 import personal from "../../assets/animation.png";
 import robot from "../../assets/robot.jpg";
 import smart from "../../assets/smart.png"
