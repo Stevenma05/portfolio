@@ -27,7 +27,7 @@ function About() {
             <p>Hello! My name is Steven Abdalla, and I am a Computer Science student with a strong passion for front-end development. I am dedicated to building intuitive and visually engaging user interfaces, continuously learning, and staying up to date with the latest technologies in the field.</p>
             <p>When I am not coding, I am playing soccer. <stong>Fun Fact: </stong>I used to play professionally for my age group in Dubai.</p>
             <div className='cards'>
-                <Card className="card" title="Education" content1="University of south florida" content2="BS in Computer Science" content3="Expected: May 2026" content4="GPA: 3.82/4.0"/>
+                <Card className="card" title="Education" content1="University of South Florida" content2="BS in Computer Science" content3="Expected: May 2026" content4="GPA: 3.82/4.0"/>
                 <Card className="card" title="Hobbies" content1="I love sports, especially soccer. I also love socializing and hanging out with my friends"/>
             </div>
         </div>
