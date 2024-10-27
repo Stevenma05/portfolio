@@ -12,7 +12,7 @@ function Hero() {
         <h1>Steven Abdalla</h1>
         <h2>I am a passionate computer science student</h2>
         <a
-          href="https://drive.google.com/file/d/1rlJdW842cl7OzUm08LD624wj4Gl0-PS_/view?usp=sharing"
+          href="https://drive.google.com/file/d/13itJ2LjAfkjh71Ktlg1LxQU8zQHJsFy_/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
